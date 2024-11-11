@@ -14,7 +14,8 @@ void handle_get(http_request request) {
 }
 
 int main() {
-    uri_builder uri(U("http://localhost:8080/"));
+  
+    uri_builder uri(U("http://0.0.0.0:8080/"));
     auto addr = uri.to_uri().to_string();
     http_listener listener(addr);
 
@@ -27,7 +28,7 @@ int main() {
             .wait();
 
         string line;
-        getline(cin, line);
+        getline(cin, line); 
     } catch (const exception& e) {
         cerr << "An error occurred: " << e.what() << endl;
     }
