@@ -6,7 +6,7 @@ SOURCES = main.cpp
 all: $(TARGET)
 
 $(TARGET): $(SOURCES)
-	$(CXX) $(CXXFLAGS) -o $(TARGET) $(SOURCES)
+$(CXX) $(CXXFLAGS) -o $(TARGET) $(SOURCES)
 
 clean:
-	rm -f $(TARGET)
+rm -f $(TARGET)
